@@ -5,93 +5,39 @@ Creators: 	Dino Biel
 
 Class: Comp680
 Project Name: Mercury
+Welcome to Mercury's Github page! This project is an application designed for students to manage student life during their school semester. It has a social aspect as well including a message board for communication and several handy features! 
 
 Installation Notes: If you pull this project, make sure to run npm install (to get the proper node files) This project also uses "agm" for google maps, make sure to install that as well please see this link for installation notes for 
 agm: https://angular-maps.com/api-docs/agm-core/
 
+Technology Stack:
+- Angular 4+ (For the front end of the application)
+- ASP.NET CORE 2.0 (Handles the backend of the application and routing http requests to the database)
+- MSSQL (Houses the database)
+- Selenium (Our automated testing suite)
+- Google Maps API (you will need to supply your own keys as the ones in this project are deactivated)
+- Google Calendar API (You will need to supply your own keys as the ones in this project are deactivated)
 
+Project Features:
+-----------------------------
+Message Board: 
+-This allows users to post to a wall that everyone can see. 
+-This project has the ability to add/remove/edit messages.
+-You also have the ability to sort messages (by clicking on a users name)
 
-Hello and welcome to my projects GitHub! This document is designed to help you navigate my project to find the specific
-elements we are being graded on. so with that lets get right in to it!
----------------
-1) MVC
----------------
-a) In MercuryBackend folder you will find my ASP.NET Core 2.0 backend this contains
- - Models Folder
- - Controllers Folder
- 
- b) In frontend you will find my Angular 2 portion which handles all the Views for my project
- 
----------------
-2) SPA
----------------
-- This project is a Single Page Application which uses Routes to switch between different views in Angular 2. The bulk of
-my routing is handled in "frontend/src/app/nav.component.ts" although there are some other routes handled in different ts files.
+Login/Logout/Resitration:
+- Utilizes SHA-256 encryption to make sure data is secured during the above processes
+- Added features to instruct user if information entered on screen matches criteria needed to login/register properly
 
-------------------------------------
-3) Two Tables with FK Relationship
-------------------------------------
-This can be found in: "MercuryBackend/Mercury/Models"
-- In this folder you will fine 3 files: "Messages.cs", "Users.cs" "ApiContext.cs"
+Edit User Information:
+Users have the ability to change their email, name, password from their account screen
 
-The Messages and Users files are used to create the "Messages" and "User" tables in my DB
-- The Foriegn key relationship is established between OwnerId (from Messages) and Id (from Users)
-- You can see the creation of this relationship in the "ApiContext.cs" file
+Map:
+- Users can plot their classes on their map and it is saved to the database
+- Users can also delete classes plotted once done with class
 
-------------------------------------
-4) ORM
-------------------------------------
-Conviently enough, if you have the Models file open from #3 you will also see ORM in action here as I use EntityFrameWork Core for ORM
+Notes: 
+- Users can save private notes which are not viewable by any other users
 
-
-------------------------------------
-5) Authentication and Authorization
-------------------------------------
-Authentication:
-You can find examples of my Authentication in: "MercuryBackend/Mercury/Controllers/AuthController.cs" and MercuryBackend/Mercury/Startup.cs"
-
-Authorization:
-You can find examples of my Authorization in: "frontend/src/app/nav.component.ts" where I don't let the users do specific actions unless they
-have successfully logged in. Also I do not let people access the ability to post messages or even see the tab unless they are logged in.
-
-------------------------------------
-6) Unit Testing and Automated Testing
-------------------------------------
-Backend:
-Backend unit testing can be found: "MercuryBackend\xUnitMercuryTesting" where I have 1 file that does 2 Unit Tests:
-- Mocks my post function (simulates post to a inMemoryDB and then checks to see if messages was posted)
-- Mocks my Get function  (Uses seeded data to InMemoryDB and checks to see if it successfully returns message from DB)
-
-Frontend:
-Frontend unit testing can be found: "frontend/src/app/login.component.spec.ts" where I have 1 unit test:
-- I test my login.component which has dependency injection (required)
-
-Selenium:
-- This project uses selenium to simulate users attempting to use the website. There are both positive and negative testing (negative testing being malacious or error prone attempts to use the website)
-- These are done in the Frontend directory
-
-------------------------------------
-7) Solid Principles
-------------------------------------
-This one is not so easy to point out as it is spread out through my project however I can make the following assertions:
-
-S - I do have Single Responsibility principle throughout my project
-O - My project is open for extension and closed for modification
-L - Liskov substitution principle I still don't quite understand and followed this to the best of my ability
-I - I did not do any interfacing in this project so I cannot assert this.
-D - This can be found throughout my front end and a good example of this can be found here: "frontend/src/app/new-message.component.ts"
-
-------------------------------------
-8) CRUD
-------------------------------------
-This was not a requirement per-se, but users have the ability to:
-Create - Messages and accounts
-Read - Users have the ability to retrieve and view their own messages or any other users message (by clicking on the users name in a message)
-Update - Users have the ability to update email, password, and first and last name
-Delete - Users have the ability to delete their accounts
-
-
-------------------------------------
-9) API Usage
-------------------------------------
-This project utilizes both the Google Maps API with Waldo API (From CSUN) to map classroom locations (for our map feature), and the Google Calendar API to display important upcoming dates from the school.
+Search Message History:
+- Users can search their message history
