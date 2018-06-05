@@ -1,0 +1,11 @@
+C:\Users\dinob\Documents\COMP586\OODEV Project\messageboard\MercuryBackend\Mercury\bin\Debug\netcoreapp2.0\Mercury.deps.json
+C:\Users\dinob\Documents\COMP586\OODEV Project\messageboard\MercuryBackend\Mercury\bin\Debug\netcoreapp2.0\Mercury.runtimeconfig.json
+C:\Users\dinob\Documents\COMP586\OODEV Project\messageboard\MercuryBackend\Mercury\bin\Debug\netcoreapp2.0\Mercury.runtimeconfig.dev.json
+C:\Users\dinob\Documents\COMP586\OODEV Project\messageboard\MercuryBackend\Mercury\bin\Debug\netcoreapp2.0\Mercury.dll
+C:\Users\dinob\Documents\COMP586\OODEV Project\messageboard\MercuryBackend\Mercury\bin\Debug\netcoreapp2.0\Mercury.pdb
+C:\Users\dinob\Documents\COMP586\OODEV Project\messageboard\MercuryBackend\Mercury\obj\Debug\netcoreapp2.0\Mercury.csprojResolveAssemblyReference.cache
+C:\Users\dinob\Documents\COMP586\OODEV Project\messageboard\MercuryBackend\Mercury\obj\Debug\netcoreapp2.0\Mercury.csproj.CoreCompileInputs.cache
+C:\Users\dinob\Documents\COMP586\OODEV Project\messageboard\MercuryBackend\Mercury\obj\Debug\netcoreapp2.0\Mercury.AssemblyInfoInputs.cache
+C:\Users\dinob\Documents\COMP586\OODEV Project\messageboard\MercuryBackend\Mercury\obj\Debug\netcoreapp2.0\Mercury.AssemblyInfo.cs
+C:\Users\dinob\Documents\COMP586\OODEV Project\messageboard\MercuryBackend\Mercury\obj\Debug\netcoreapp2.0\Mercury.dll
+C:\Users\dinob\Documents\COMP586\OODEV Project\messageboard\MercuryBackend\Mercury\obj\Debug\netcoreapp2.0\Mercury.pdb

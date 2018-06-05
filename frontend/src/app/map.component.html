@@ -1,0 +1,46 @@
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<mat-card>
+<agm-map 
+  [latitude]="lat" 
+  [longitude]="lng"    
+  [zoom]="zoom"
+  [disableDefaultUI]=false
+  [zoomControl]="false">
+ 
+  <!--this loops through and places all the markers set from map.component.ts -->
+  <agm-marker 
+    *ngFor="let m of webService.markers | async"
+    [latitude]="m.lat" 
+    [longitude]="m.lng"
+    >
+    
+    <!--this displays the info we want to display in a window when you click the marker-->
+    <agm-info-window>
+      <p>{{m.markerName}}</p>
+      <p>{{m.lat}}</p>
+      <p>{{m.lng}}</p>
+      <p>{{m.bldg}}</p>
+      <p>Marker ID: {{m.markerId}}</p>
+    </agm-info-window>
+  </agm-marker>
+</agm-map>
+</mat-card>
+
+<mat-card class="card">
+  <mat-card-content>
+      <mat-input-container>
+          <textarea  [(ngModel)]="room" matInput placeholder = "Select a Room (Example: JD2211)"></textarea>
+      </mat-input-container>
+      <mat-card-actions>
+          <button (click)="addRoom()"  mat-raised-button color="primary">Add Classroom!</button>
+      </mat-card-actions>
+  </mat-card-content>
+  <!-- Delete stuff-->
+  <mat-input-container>
+      <textarea  [(ngModel)]="markerId" matInput placeholder = "Enter Marker ID to Delete"></textarea>
+  </mat-input-container>
+  <mat-card-actions>
+      <button (click)="deleteUserRoom()" routerLink="/redirect" mat-raised-button color="primary">Delete Room</button>
+  </mat-card-actions>
+</mat-card>
