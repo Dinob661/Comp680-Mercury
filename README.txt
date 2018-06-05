@@ -1,10 +1,15 @@
 Creators: 	Dino Biel
-			Clifford Mao
-			Ayrin Golestanian
-			Carlos Hernandez
+		Clifford Mao
+		Ayrin Golestanian
+		Carlos Hernandez
 
 Class: Comp680
 Project Name: Mercury
+
+Installation Notes: If you pull this project, make sure to run npm install (to get the proper node files) This project also uses "agm" for google maps, make sure to install that as well please see this link for installation notes for 
+agm: https://angular-maps.com/api-docs/agm-core/
+
+
 
 Hello and welcome to my projects GitHub! This document is designed to help you navigate my project to find the specific
 elements we are being graded on. so with that lets get right in to it!
@@ -50,7 +55,7 @@ You can find examples of my Authorization in: "frontend/src/app/nav.component.ts
 have successfully logged in. Also I do not let people access the ability to post messages or even see the tab unless they are logged in.
 
 ------------------------------------
-6) Unit Testing
+6) Unit Testing and Automated Testing
 ------------------------------------
 Backend:
 Backend unit testing can be found: "MercuryBackend\xUnitMercuryTesting" where I have 1 file that does 2 Unit Tests:
@@ -60,6 +65,10 @@ Backend unit testing can be found: "MercuryBackend\xUnitMercuryTesting" where I 
 Frontend:
 Frontend unit testing can be found: "frontend/src/app/login.component.spec.ts" where I have 1 unit test:
 - I test my login.component which has dependency injection (required)
+
+Selenium:
+- This project uses selenium to simulate users attempting to use the website. There are both positive and negative testing (negative testing being malacious or error prone attempts to use the website)
+- These are done in the Frontend directory
 
 ------------------------------------
 7) Solid Principles
@@ -80,3 +89,9 @@ Create - Messages and accounts
 Read - Users have the ability to retrieve and view their own messages or any other users message (by clicking on the users name in a message)
 Update - Users have the ability to update email, password, and first and last name
 Delete - Users have the ability to delete their accounts
+
+
+------------------------------------
+9) API Usage
+------------------------------------
+This project utilizes both the Google Maps API with Waldo API (From CSUN) to map classroom locations (for our map feature), and the Google Calendar API to display important upcoming dates from the school.
